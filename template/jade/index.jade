@@ -1,0 +1,60 @@
+include ./lib/header.jade
+    script.
+        !(function() {
+            var rem;
+            rem = function() {
+                document.documentElement.style.fontSize = (document.documentElement.clientWidth || document.documentElement.clientWidth) + 'px';
+            };
+            rem();
+            window.addEventListener('resize', rem, false);
+            var _hmt = _hmt || []
+        })();
+
+    link(href="/static/css/index.css",rel="stylesheet",type="text/css")
+    body
+        div.start
+            div.start-btn=""
+        div.start1.gif=""
+        div.start2.gif=""
+        div.start3.gif=""
+        div.start4.gif=""
+        div.start5.gif=""
+        div.start6.gif=""
+        div.start7.gif=""
+        div.start8.gif=""
+        section.swiper-container
+            section.swiper-wrapper
+                section.swiper-slide(class="page page1")
+                    div.background="" 
+                section.swiper-slide(class="page page2")
+                    div.background="" 
+                section.swiper-slide(class="page page3")
+                    div.background="" 
+                section.swiper-slide(class="page page4")
+                    div.background="" 
+                section.swiper-slide(class="page page5")
+                    div.background="" 
+                        div.first=""
+                        div.second=""
+                        div.third=""
+                    div.first-image=""
+                    div.second-image=""
+                    div.third-image=""
+                section.swiper-slide(class="page page6")
+                    div.background="" 
+                section.swiper-slide(class="page page7")
+                    div.background="" 
+                section.swiper-slide(class="page page8")
+                    div.background
+                        div.full-image
+                            div.swiper-container
+                                div.swiper-wrapper
+                                    - var a = ['background2.jpg','background3.jpg','background4.jpg'];
+                                    - for(var i in a)
+                                        div.image-auto.swiper-slide(class="image-auto#{i}",data-image="/static/image/#{a[i]}",style="background-image:url('/static/image/#{a[i]}')")
+                        - var a = ['background2.jpg','background3.jpg','background4.jpg'];
+                        - for(var i in a)
+                            div.image(data-image="/static/image/#{a[i]}",style="background-image:url('/static/image/#{a[i]}')",data-index="#{i}")
+
+    script(language="javascript",src="/static/js/index.min.js")
+    script(language="javascript",src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js")
