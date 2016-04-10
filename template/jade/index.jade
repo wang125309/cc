@@ -58,13 +58,22 @@ include ./lib/header.jade
                         div.full-image
                             div.swiper-container
                                 div.swiper-wrapper
-                                    - var a = ['background2.jpg','background3.jpg','background4.jpg'];
+                                    - var a = ['car1.jpg','car2.jpg','car3.jpg'];
                                     - for(var i in a)
                                         div.image-auto.swiper-slide(class="image-auto#{i}",data-image="/static/image/#{a[i]}",style="background-image:url('/static/image/#{a[i]}')")
-                        - var a = ['background2.jpg','background3.jpg','background4.jpg'];
+                        - var a = ['car1.jpg','car2.jpg','car3.jpg'];
                         - for(var i in a)
                             div.image(data-image="/static/image/#{a[i]}",style="background-image:url('/static/image/#{a[i]}')",data-index="#{i}")
                                 div.pointer=""
 
     script(language="javascript",src="/static/js/index.min.js")
     script(language="javascript",src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js")
+    script(language="javascript").
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?44c2ac29cbe237357637f2939d6cec09";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+
