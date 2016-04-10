@@ -29,8 +29,9 @@ window.onload = function(){
     var clearAnimation = function(fun) {
         fun();
     };
+    var swiper;
     var setSwiper = function() {
-        var swiper = new Swiper('section.swiper-container', {
+        swiper = new Swiper('section.swiper-container', {
             direction:'vertical',
             speed:500,
             onInit: function() {
@@ -82,12 +83,14 @@ window.onload = function(){
         $(".first-image").velocity("fadeIn"); 
         $(".page6 .background").css("background-image","url('/static/image/background6-2.jpg')");
         $(".page5 .background").off("touchmove");
+
     });
     $(".third").on("tap",function(){
         $(".page5 .background").velocity("fadeOut");
         $(".third-image").velocity("fadeIn"); 
         $(".page6").remove();
         $(".page5 .background").off("touchmove");
+        swiper.update();
     });
     var carswiper ;
     $(".car1").on("tap",function(){
