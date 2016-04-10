@@ -75,14 +75,16 @@ window.onload = function(){
     });
     $(".first").on("tap",function(){
         $(".page5 .background").velocity("fadeOut");
-        $(".second-image").velocity("fadeIn");
+        $(".first-image").velocity("fadeIn");
         $(".page5 .background").off("touchmove");
+        console.log("first");
     });
     $(".second").on("tap",function(){
         $(".page5 .background").velocity("fadeOut");
-        $(".first-image").velocity("fadeIn"); 
+        $(".second-image").velocity("fadeIn"); 
         $(".page6 .background").css("background-image","url('/static/image/background6-2.jpg')");
         $(".page5 .background").off("touchmove");
+        console.log("2");
 
     });
     $(".third").on("tap",function(){
@@ -91,6 +93,7 @@ window.onload = function(){
         $(".page6").remove();
         $(".page5 .background").off("touchmove");
         swiper.update();
+        console.log("f3");
     });
     var carswiper ;
     $(".car1").on("tap",function(){
