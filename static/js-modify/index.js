@@ -89,6 +89,49 @@ window.onload = function(){
         $(".page6").remove();
         $(".page5 .background").off("touchmove");
     });
+    var carswiper ;
+    $(".car1").on("tap",function(){
+        $(".full-image").css({"display":"block"}); 
+        if(!carswiper) {
+            carswiper = new Swiper('div.swiper-container', {
+                speed:500,
+                initialSlide : 1,
+                slidesPerView : 1
+            });
+        }
+        else {
+            carswiper.slideTo(1,0,false);
+        }
+        
+    });
+    $(".car2").on("tap",function(){
+        $(".full-image").css({"display":"block"}); 
+        if(!carswiper) {
+            carswiper = new Swiper('div.swiper-container', {
+                speed:500,
+                initialSlide : 0,
+                slidesPerView : 1
+            });
+        }
+        else {
+            carswiper.slideTo(0,0,false);
+        }
+        
+    });
+    $(".car3").on("tap",function(){
+        $(".full-image").css({"display":"block"}); 
+        if(!vswiper) {
+            carswiper = new Swiper('div.swiper-container', {
+                speed:500,
+                initialSlide : 2,
+                slidesPerView : 1
+            });
+        }
+        else {
+            carswiper.slideTo(2,0,false);
+        }
+        
+    });
     var vswiper ;
     $(".image").on("tap",function(){
         var image = $(this);

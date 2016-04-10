@@ -118,7 +118,7 @@ image-fit(image)
     width:0.08rem
     position:absolute
     bottom:0
-    left:0.04rem
+    left:0.14rem
     z-index:5
 
 body 
@@ -292,6 +292,48 @@ body
     .page7 
         .background 
             background('background7.jpg')
+            .car1
+                position:absolute
+                width:65%
+                height:25%
+                top:29%
+                right:8%
+                transform:rotate(-7deg)
+            .car2
+                position:absolute
+                width:55%
+                height:21%
+                top:54%
+                right:40%
+                transform:rotate(4deg)
+            .car3
+                position:absolute
+                width:58%
+                height:23%
+                top:71%
+                right:6%
+                transform:rotate(-5deg)
+            .full-image
+                height:100%
+                width:100%
+                background-color:#000
+                position:absolute
+                top:0
+                z-index:1000
+                display:none
+                .swiper-wrapper
+                    height:0.7rem
+                    position:absolute
+                    margin-top:-.35rem
+                    top:50%
+                    .image-auto
+                        width:100%
+                        display:inline-block
+                        background-size:100% auto
+                        background-repeat:no-repeat
+                        background-position:center center
+
+
     .page8 
         .background 
             background('background5.jpg')
