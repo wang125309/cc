@@ -22,6 +22,13 @@ window.onload = function(){
             onInit: function() {
             },
             onSlideChangeEnd: function(swiper){
+                if(swiper.activeIndex == 2) {
+                    $(".fly").css("display","block");
+                }
+                if(swiper.activeIndex == 3) {
+                    $(".cloud").css("display","block");
+                    $(".pic").css("display","block");
+                }
             }
         });
     };

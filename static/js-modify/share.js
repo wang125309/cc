@@ -1,14 +1,14 @@
 $(function(){
-    $.post("/wx/portal/wxconfig/",{
+    $.post("/portal/wxconfig/",{
 		"url":location.href
 	},function(data){
 		wx.config(data);
         var share = function() {
             shareJson = {
-                link:"http://cm.qingdianer.com",
-                imgUrl:"http://cm.qingdianer.com/static/image/share.jpg",
-                title:"一字千金",
-                desc:"中国移动车联网活动来啦~"
+                link:"http://vs.importos.com",
+                imgUrl:"http://vs.importos.com/static/image/share-image.png",
+                title:"蔚然大观，揽尽情怀",
+                desc:"蔚然大观，揽尽情怀"
 
             };
 			wx.onMenuShareTimeline(shareJson);
@@ -18,8 +18,8 @@ $(function(){
             share();
         });
 		wx.error(function(res){
-			$.get("/wx/portal/update_access_token/",function(data){
-				$.post("/wx/portal/wxconfig/",{
+			$.get("/portal/update_access_token/",function(data){
+				$.post("/portal/wxconfig/",{
 					"url":location.href
 				},function(data){
 					wx.config(data);

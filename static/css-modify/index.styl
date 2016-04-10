@@ -24,7 +24,30 @@
     height:100%
     z-index:100000
 
-
+@-webkit-keyframes pic
+    0%
+        -webkit-transform:rotate(5deg)
+    33%
+        -webkit-transform:rotate(0deg)
+    66%
+        -webkit-transform:rotate(5deg)
+    100%
+        -webkit-transform:rotate(0deg)
+@-webkit-keyframes cloud
+    0%
+        -webkit-transform:translateX(-1rem)
+    100%
+        -webkit-transform:translateX(0)
+@-webkit-keyframes fly
+    0%
+        -webkit-transform:translateX(1rem)
+    100%
+        -webkit-transform:translateX(0)
+@-webkit-keyframes pointer
+    0%,100%
+        opacity:0
+    50%
+        opacity:1
 @-webkit-keyframes up-animation 
     0%,100% 
         -webkit-transform:scale(1)
@@ -154,15 +177,58 @@ body
     .page1 
         .background 
             background('background1.jpg')
+            .logo
+                width:0.15rem
+                height:0.25rem
+                position:absolute
+                right:0.1rem
+                bottom:0rem
+                image-wauto('logo.png')
     .page2 
         .background 
             background('background2.jpg')
     .page3 
         .background 
             background('background3.jpg')
+            .logo
+                width:0.15rem
+                height:0.25rem
+                position:absolute
+                right:0.1rem
+                top:0.1rem
+                image-wauto('logo.png')
+            .fly
+                width:0.27rem
+                height:0.25rem
+                position:absolute
+                left:0.06rem
+                top:21%
+                image-wauto('fly.png')
+                animation(3s,'fly',0s)
+                display:none
     .page4 
         .background 
             background('background4.jpg')
+            .cloud
+                width:0.2rem
+                height:0.15rem
+                position:absolute
+                image-wauto('cloud.png')
+                top:0.1rem
+                right:-0.15rem
+                animation(5s,'cloud',0s)
+                display:none
+            .pic
+                width:90%
+                image-wauto('pic.png')
+                height:0.55rem
+                margin:0 auto
+                bottom:0
+                position:absolute
+                left:0
+                background-position:bottom center
+                animation(0.5s,'pic',0s)
+                display:none
     .page5 
         .background 
             background('background5.jpg')
@@ -195,10 +261,31 @@ body
                 margin-top:0.165rem
         .first-image
             background('first-image.jpg')
+            .clock
+                width:0.2rem
+                height:0.2rem
+                position:absolute
+                bottom:0.2rem
+                right:0.1rem
+                image-wauto('clock.gif')
         .second-image
             background('second-image.jpg')
+            .clock
+                width:0.2rem
+                height:0.2rem
+                position:absolute
+                bottom:0.2rem
+                right:0.1rem
+                image-wauto('clock.gif')
         .third-image
             background('third-image.jpg')
+            .clock
+                width:0.2rem
+                height:0.2rem
+                position:absolute
+                bottom:0.2rem
+                right:0.1rem
+                image-wauto('clock.gif')
     .page6 
         .background 
             background('background6.jpg')
@@ -213,7 +300,16 @@ body
                 flex:4
                 margin:0.01rem
                 height:0.3rem
-                border:1px solid #ccc
+                position:relative
+                .pointer
+                    position:absolute
+                    right:0rem
+                    bottom:-.03rem
+                    width:0.04rem
+                    height:0.06rem
+                    image-wauto('pointer.png')
+                    animation(1.5s,'pointer',0s)
+                    -webkit-animation-iteration-count:infinite
             .full-image
                 height:100%
                 width:100%
@@ -233,3 +329,4 @@ body
                         background-size:100% auto
                         background-repeat:no-repeat
                         background-position:center center
+
