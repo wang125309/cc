@@ -64,25 +64,44 @@ include ./lib/header.jade
                         div.car1=""
                         div.car2=""
                         div.car3=""
-
+                        div.show-cnm 查看图集
                         div.full-image
-                            div.swiper-container
+                            div.xiamiancnm.swiper-container
                                 div.swiper-wrapper
                                     - var a = ['car1.jpg','car2.jpg','car3.jpg'];
                                     - for(var i in a)
                                         div.image-auto.swiper-slide(class="image-auto#{i}",data-image="/static/image/#{a[i]}",style="background-image:url('/static/image/#{a[i]}')")
-                //section.swiper-slide(class="page page8")
-                //    div.background
-                //        div.full-image
-                //            div.swiper-container
-                //                div.swiper-wrapper
-                //                    - var a = ['car1.jpg','car2.jpg','car3.jpg'];
-                //                    - for(var i in a)
-                //                        div.image-auto.swiper-slide(class="image-auto#{i}",data-image="/static/image/#{a[i]}",style="background-image:url('/static/image/#{a[i]}')")
-                //        - var a = ['car1.jpg','car2.jpg','car3.jpg'];
-                //        - for(var i in a)
-                //            div.image(data-image="/static/image/#{a[i]}",style="background-image:url('/static/image/#{a[i]}')",data-index="#{i}")
-                //                div.pointer=""
+
+
+                            
+        div.more
+            div.background
+                div.less 返回
+                div.full-image
+                    div.swiper-container
+                        div.swiper-wrapper
+                            - var a = ['o1.jpg','o2.jpg','o3.jpg','o4.jpg','o5.jpg','o6.jpg','o7.jpg','o8.jpg','o9.jpg','o10.jpg','o11.jpg','o12.jpg','o13.jpg','o14.jpg','o15.jpg'];
+                            - for(var i in a)
+                                div.image-auto.swiper-slide(class="image-auto#{i}",data-image="/static/image/#{a[i]}",style="background-image:url('/static/image/#{a[i]}')")
+                - var a = ['o1.jpg','o2.jpg','o3.jpg','o4.jpg','o5.jpg','o6.jpg','o7.jpg','o8.jpg','o9.jpg','o10.jpg','o11.jpg','o12.jpg','o13.jpg','o14.jpg','o15.jpg'];
+                - for(var i in a)
+                    div.image(data-image="/static/image/#{a[i]}",style="background-image:url('/static/image/#{a[i]}')",data-index="#{i}")
+                        div.pointer=""
+        div.cnm
+            div.background
+                div.car1=""
+                div.car2=""
+                div.car3=""
+                div.car4=""
+                div.car5=""
+                div.return-cnm 返回
+                div#more 查看更多图集
+                div.full-image
+                    div.cnm-container.swiper-container
+                        div.swiper-wrapper
+                            - var a = ['cnm1.jpg','cnm2.jpg','cnm3.jpg','cnm4.jpg','cnm5.jpg'];
+                            - for(var i in a)
+                                div.image-auto.swiper-slide(class="image-auto#{i}",data-image="/static/image/#{a[i]}",style="background-image:url('/static/image/#{a[i]}')")
 
     script(language="javascript",src="/static/js/index.min.js")
     script(language="javascript",src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js")
