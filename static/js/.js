@@ -1988,6 +1988,7 @@ window.onload = function(){
     });
     var cnm2swiper;
     $(".cnm-2 .car1").on("tap",function(){
+        console.log("I do");
         $(".cnm-2 .full-image").css({"display":"block"}); 
         if(!cnm2swiper) {
             cnm2swiper = new Swiper('div.cnm2-container.swiper-container', {
