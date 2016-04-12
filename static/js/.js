@@ -2012,11 +2012,15 @@ window.onload = function(){
     });
     $("#more").on("tap",function(){
         $(".more").velocity("fadeIn");  
-        $(".cnm").velocity("fadeOut"); 
+        $(".cnm").velocity("fadeOut");
+        $(document).off("touchmove");
     });
     $(".less").on("tap",function(){
         $(".more").velocity("fadeOut");  
         $(".cnm").velocity("fadeIn"); 
+        $(document).on("touchmove",function(){
+            return false;
+        });
     });
     $(".full-image").on("tap",function(){
         $(this).css("display","none"); 
