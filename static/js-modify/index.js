@@ -235,7 +235,7 @@ window.onload = function(){
     });
     $(".less").on("tap",function(){
         $(".more").velocity("fadeOut");  
-
+        $(".cnm").velocity("fadeIn"); 
     });
     $(".full-image").on("tap",function(){
         $(this).css("display","none"); 

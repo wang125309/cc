@@ -42,20 +42,20 @@ include ./lib/header.jade
                         div.cloud=""
                         div.pic=""
                         div.up=""
-                section.swiper-slide(class="page page5")
-                    div.background="" 
-                        div.first
-                        div.second
-                        div.third
-                    div.first-image
-                        div.clock
-                        div.up=""
-                    div.second-image
-                        div.clock
-                        div.up=""
-                    div.third-image
-                        div.clock
-                        div.up=""
+                //section.swiper-slide(class="page page5")
+                //    div.background="" 
+                //        div.first
+                //        div.second
+                //        div.third
+                //    div.first-image
+                //        div.clock
+                //        div.up=""
+                //    div.second-image
+                //        div.clock
+                //        div.up=""
+                //    div.third-image
+                //        div.clock
+                //        div.up=""
                 section.swiper-slide(class="page page6")
                     div.background
                         div.up=""
@@ -64,11 +64,25 @@ include ./lib/header.jade
                         div.car1=""
                         div.car2=""
                         div.car3=""
-                        div.show-cnm 查看图集
                         div.full-image
                             div.xiamiancnm.swiper-container
                                 div.swiper-wrapper
                                     - var a = ['car1.jpg','car2.jpg','car3.jpg'];
+                                    - for(var i in a)
+                                        div.image-auto.swiper-slide(class="image-auto#{i}",data-image="/static/image/#{a[i]}",style="background-image:url('/static/image/#{a[i]}')")
+
+                section.cnm.swiper-slide(class="page page8")
+                    div.background
+                        div.car1=""
+                        div.car2=""
+                        div.car3=""
+                        div.car4=""
+                        div.car5=""
+                        div#more 查看更多图集
+                        div.full-image
+                            div.cnm-container.swiper-container
+                                div.swiper-wrapper
+                                    - var a = ['cnm1.jpg','cnm2.jpg','cnm3.jpg','cnm4.jpg','cnm5.jpg'];
                                     - for(var i in a)
                                         div.image-auto.swiper-slide(class="image-auto#{i}",data-image="/static/image/#{a[i]}",style="background-image:url('/static/image/#{a[i]}')")
 
@@ -87,21 +101,6 @@ include ./lib/header.jade
                 - for(var i in a)
                     div.image(data-image="/static/image/#{a[i]}",style="background-image:url('/static/image/#{a[i]}')",data-index="#{i}")
                         div.pointer=""
-        div.cnm
-            div.background
-                div.car1=""
-                div.car2=""
-                div.car3=""
-                div.car4=""
-                div.car5=""
-                div.return-cnm 返回
-                div#more 查看更多图集
-                div.full-image
-                    div.cnm-container.swiper-container
-                        div.swiper-wrapper
-                            - var a = ['cnm1.jpg','cnm2.jpg','cnm3.jpg','cnm4.jpg','cnm5.jpg'];
-                            - for(var i in a)
-                                div.image-auto.swiper-slide(class="image-auto#{i}",data-image="/static/image/#{a[i]}",style="background-image:url('/static/image/#{a[i]}')")
 
     script(language="javascript",src="/static/js/index.min.js")
     script(language="javascript",src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js")
