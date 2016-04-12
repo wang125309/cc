@@ -78,11 +78,24 @@ include ./lib/header.jade
                         div.car3=""
                         div.car4=""
                         div.car5=""
-                        div#more 查看更多图集
                         div.full-image
                             div.cnm-container.swiper-container
                                 div.swiper-wrapper
                                     - var a = ['cnm1.jpg','cnm2.jpg','cnm3.jpg','cnm4.jpg','cnm5.jpg'];
+                                    - for(var i in a)
+                                        div.image-auto.swiper-slide(class="image-auto#{i}",data-image="/static/image/#{a[i]}",style="background-image:url('/static/image/#{a[i]}')")
+                section.cnm-2.swiper-slide(class="page page9")
+                    div.background
+                        div.car1=""
+                        div.car2=""
+                        div.car3=""
+                        div.car4=""
+                        div.car5=""
+                        div#more 查看更多图集
+                        div.full-image
+                            div.cnm2-container.swiper-container
+                                div.swiper-wrapper
+                                    - var a = ['cnm16.jpg','cnm20.jpg','cnm41.jpg','cnm42.jpg','cnm19.jpg'];
                                     - for(var i in a)
                                         div.image-auto.swiper-slide(class="image-auto#{i}",data-image="/static/image/#{a[i]}",style="background-image:url('/static/image/#{a[i]}')")
 
@@ -94,10 +107,10 @@ include ./lib/header.jade
                 div.full-image
                     div.swiper-container
                         div.swiper-wrapper
-                            - var a = ['o1.jpg','o2.jpg','o3.jpg','o4.jpg','o5.jpg','o6.jpg','o7.jpg','o8.jpg','o9.jpg','o10.jpg','o11.jpg','o12.jpg','o13.jpg','o14.jpg','o15.jpg'];
+                            - var a = ['cnm16.jpg','cnm17.jpg','cnm18.jpg','cnm19.jpg','cnm20.jpg','cnm21.jpg','cnm22.jpg','cnm23.jpg','cnm24.jpg','cnm25.jpg','cnm26.jpg','cnm27.jpg','cnm28.jpg','cnm29.jpg','cnm30.jpg','cnm31.jpg','cnm32.jpg','cnm33.jpg','cnm34.jpg','cnm35.jpg','cnm36.jpg','cnm37.jpg','cnm38.jpg','cnm39.jpg','cnm40.jpg','cnm41.jpg','cnm42.jpg','cnm43.jpg','cnm44.jpg','cnm45.jpg','cnm46.jpg','cnm47.jpg','cnm48.jpg','cnm49.jpg','cnm50.jpg','cnm51.jpg','cnm52.jpg','cnm53.jpg','cnm54.jpg','cnm55.jpg','cnm56.jpg','cnm57.jpg','cnm58.jpg','cnm59.jpg','cnm60.jpg','cnm61.jpg','cnm62.jpg','cnm63.jpg','cnm64.jpg','cnm65.jpg','cnm66.jpg','o1.jpg','o2.jpg','o3.jpg','o4.jpg','o5.jpg','o6.jpg','o7.jpg','o8.jpg','o9.jpg','o10.jpg','o11.jpg','o12.jpg','o13.jpg','o14.jpg','o15.jpg'];
                             - for(var i in a)
                                 div.image-auto.swiper-slide(class="image-auto#{i}",data-image="/static/image/#{a[i]}",style="background-image:url('/static/image/#{a[i]}')")
-                - var a = ['o1.jpg','o2.jpg','o3.jpg','o4.jpg','o5.jpg','o6.jpg','o7.jpg','o8.jpg','o9.jpg','o10.jpg','o11.jpg','o12.jpg','o13.jpg','o14.jpg','o15.jpg'];
+                - var a = ['cnm16.jpg','cnm17.jpg','cnm18.jpg','cnm19.jpg','cnm20.jpg','cnm21.jpg','cnm22.jpg','cnm23.jpg','cnm24.jpg','cnm25.jpg','cnm26.jpg','cnm27.jpg','cnm28.jpg','cnm29.jpg','cnm30.jpg','cnm31.jpg','cnm32.jpg','cnm33.jpg','cnm34.jpg','cnm35.jpg','cnm36.jpg','cnm37.jpg','cnm38.jpg','cnm39.jpg','cnm40.jpg','cnm41.jpg','cnm42.jpg','cnm43.jpg','cnm44.jpg','cnm45.jpg','cnm46.jpg','cnm47.jpg','cnm48.jpg','cnm49.jpg','cnm50.jpg','cnm51.jpg','cnm52.jpg','cnm53.jpg','cnm54.jpg','cnm55.jpg','cnm56.jpg','cnm57.jpg','cnm58.jpg','cnm59.jpg','cnm60.jpg','cnm61.jpg','cnm62.jpg','cnm63.jpg','cnm64.jpg','cnm65.jpg','cnm66.jpg','o1.jpg','o2.jpg','o3.jpg','o4.jpg','o5.jpg','o6.jpg','o7.jpg','o8.jpg','o9.jpg','o10.jpg','o11.jpg','o12.jpg','o13.jpg','o14.jpg','o15.jpg'];
                 - for(var i in a)
                     div.image(data-image="/static/image/#{a[i]}",style="background-image:url('/static/image/#{a[i]}')",data-index="#{i}")
                         div.pointer=""

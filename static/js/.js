@@ -1985,11 +1985,77 @@ window.onload = function(){
             cnmswiper.slideTo(4,0,false);
         }
     });
+    var cnm2swiper;
+    $(".cnm-2 .car1").on("tap",function(){
+        $(".cnm-2 .full-image").css({"display":"block"}); 
+        if(!cnm2swiper) {
+            cnm2swiper = new Swiper('div.cnm2-container.swiper-container', {
+                speed:500,
+                initialSlide : 0,
+                slidesPerView : 1
+            });
+        }
+        else {
+            cnm2swiper.slideTo(0,0,false);
+        }
+    });
+    $(".cnm-2 .car2").on("tap",function(){
+        $(".cnm-2 .full-image").css({"display":"block"}); 
+        if(!cnm2swiper) {
+            cnm2swiper = new Swiper('div.cnm2-container.swiper-container', {
+                speed:500,
+                initialSlide : 1,
+                slidesPerView : 1
+            });
+        }
+        else {
+            cnm2swiper.slideTo(1,0,false);
+        }
+    });
+    $(".cnm-2 .car3").on("tap",function(){
+        $(".cnm-2 .full-image").css({"display":"block"}); 
+        if(!cnm2swiper) {
+            cnm2swiper = new Swiper('div.cnm2-container.swiper-container', {
+                speed:500,
+                initialSlide : 2,
+                slidesPerView : 1
+            });
+        }
+        else {
+            cnm2swiper.slideTo(2,0,false);
+        }
+    });
+    $(".cnm-2 .car4").on("tap",function(){
+        $(".cnm-2 .full-image").css({"display":"block"}); 
+        if(!cnm2swiper) {
+            cnm2swiper = new Swiper('div.cnm2-container.swiper-container', {
+                speed:500,
+                initialSlide : 3,
+                slidesPerView : 1
+            });
+        }
+        else {
+            cnm2swiper.slideTo(3,0,false);
+        }
+    });
+    $(".cnm-2 .car5").on("tap",function(){
+        $(".cnm-2 .full-image").css({"display":"block"}); 
+        if(!cnm2swiper) {
+            cnm2swiper = new Swiper('div.cnm2-container.swiper-container', {
+                speed:500,
+                initialSlide : 4,
+                slidesPerView : 1
+            });
+        }
+        else {
+            cnm2swiper.slideTo(4,0,false);
+        }
+    });
     $(".show-cnm").on("tap",function(){
-        $(".cnm").velocity("fadeIn"); 
+        $(".cnm-2").velocity("fadeIn"); 
     });
     $(".return-cnm").on("tap",function(){
-        $(".cnm").velocity("fadeOut"); 
+        $(".cnm-2").velocity("fadeOut"); 
     });
     var vswiper ;
     $(".image").on("tap",function(){
@@ -2012,12 +2078,12 @@ window.onload = function(){
     });
     $("#more").on("tap",function(){
         $(".more").velocity("fadeIn");  
-        $(".cnm").velocity("fadeOut");
+        $(".cnm-2").velocity("fadeOut");
         $(document).off("touchmove");
     });
     $(".less").on("tap",function(){
         $(".more").velocity("fadeOut");  
-        $(".cnm").velocity("fadeIn"); 
+        $(".cnm-2").velocity("fadeIn"); 
         $(document).on("touchmove",function(){
             return false;
         });
