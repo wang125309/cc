@@ -95,46 +95,47 @@ window.onload = function(){
         swiper.update();
         console.log("f3");
     });
-    var cnmswiper ;
+    var xcnmswiper ;
+
     $(".page7 .car1").on("tap",function(){
         $(".page7 .full-image").css({"display":"block"}); 
-        if(!cnmswiper) {
-            cnmswiper = new Swiper('div.xiamiancnm.swiper-container', {
+        if(!xcnmswiper) {
+            xcnmswiper = new Swiper('div.xiamiancnm.swiper-container', {
                 speed:500,
                 initialSlide : 1,
                 slidesPerView : 1
             });
         }
         else {
-            cnmswiper.slideTo(1,0,false);
+            xcnmswiper.slideTo(1,0,false);
         }
         
     });
     $(".page7 .car2").on("tap",function(){
         $(".page7 .full-image").css({"display":"block"}); 
-        if(!cnmswiper) {
-            cnmswiper = new Swiper('div.xiamiancnm.swiper-container', {
+        if(!xcnmswiper) {
+            xcnmswiper = new Swiper('div.xiamiancnm.swiper-container', {
                 speed:500,
                 initialSlide : 0,
                 slidesPerView : 1
             });
         }
         else {
-            cnmswiper.slideTo(0,0,false);
+            xcnmswiper.slideTo(0,0,false);
         }
         
     });
     $(".page7 .car3").on("tap",function(){
         $(".page7 .full-image").css({"display":"block"}); 
-        if(!vswiper) {
-            cnmswiper = new Swiper('div.xiamiancnm.swiper-container', {
+        if(!xcnmswiper) {
+            xcnmswiper = new Swiper('div.xiamiancnm.swiper-container', {
                 speed:500,
                 initialSlide : 2,
                 slidesPerView : 1
             });
         }
         else {
-            cnmswiper.slideTo(2,0,false);
+            xcnmswiper.slideTo(2,0,false);
         }
         
     });
